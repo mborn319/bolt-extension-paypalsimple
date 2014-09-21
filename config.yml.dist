@@ -1,0 +1,5 @@
+#shipping: true
+#tax: true
+#currency: EUR
+#callbackpage: http://yoursite.com/callbackurl
+#sandbox: true

@@ -1,0 +1,33 @@
+{
+	"name" : "local/paypalsimple",
+	"description" : "Adds simple paypal integration to your bolt site",
+	"type" : "bolt-extension",
+	"keywords" : [
+		""
+	],
+	"require" : {
+		"bolt/bolt" : ">=2.0.0,<3.0.0"
+	},
+	"license" : "GPL",
+	"authors" : [{
+			"name" : "realitygaps",
+			"email" : "bolt@gapsinreality.com"
+		}
+	],
+	"autoload" : {
+		"files" : [
+			"init.php"
+		],
+		"psr-4" : {
+			"Bolt\\Extension\\Bolt\\PaypalSimple\\" : [
+				"",
+				"src/"
+			]
+		}
+	},
+    "extra" : {
+        "branch-alias" : {
+            "dev-master" : "2.*"
+        }
+    }
+}
