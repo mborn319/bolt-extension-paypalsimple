@@ -17,3 +17,4 @@ Notes
 * If enabling tax, your products must have a field named tax
 * If enabling shipping, your products must have a field named shipping
 
+* There is a sandbox option in the config.yml for testing
