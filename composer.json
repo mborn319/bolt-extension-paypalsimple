@@ -1,5 +1,5 @@
 {
-	"name" : "bolt/paypalsimple",
+	"name" : "realitygaps/paypalsimple",
 	"description" : "Adds simple paypal integration to your bolt site",
 	"type" : "bolt-extension",
 	"keywords" : [
