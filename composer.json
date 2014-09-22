@@ -1,5 +1,5 @@
 {
-	"name" : "local/paypalsimple",
+	"name" : "bolt/paypalsimple",
 	"description" : "Adds simple paypal integration to your bolt site",
 	"type" : "bolt-extension",
 	"keywords" : [
