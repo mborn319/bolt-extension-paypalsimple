@@ -27,24 +27,30 @@ class Extension extends \Bolt\BaseExtension
     }
 
     /**
-     * Return isso comments div
+     * Return paypal button
      *
      * @return \Twig_Markup
      */
-    public function twigIsso()
+    public function paypalButton($recordtitle, $recordprice, $recordtax=NULL, $recordshipping=NULL)
     {
-    	$str = "<section id=\"isso-thread\"></section>";
+    	$str = "<script async=\"async\" src=\"https://www.paypalobjects.com/js/external/paypal-button-minicart.min.js?merchant=" . $this->config['email'] . "\"";
+        $str .= "data-button=\"cart\" data-name=\"" . $recordtitle. "\" data-amount=\"" . $recordprice . "\"";
+	if($this->config['shipping'] == 'true'){
+	    $str .= "data-shipping=\"" . $recordshipping . "\"";
+	}
+	if($this->config['tax'] == 'true') {
+	    $str .= "data-tax=\"" . $recordtax ."\"";
+	}
+        if($this->config['currency']){
+	    $str .= "data-currency=\"" . $this->config['currency'] . "\"";
+	}
+	if($this->config['callback']){
+	    $str .="data-callback=\"http://bolt.gpls.nl/pages/about\"";
+	}
+	if($this->config['sandbox'] == 'true'){
+	    $str .="data-env=\"sandbox\"";
+	}
+	$str .= "></script>";
         return new \Twig_Markup($str, 'UTF-8');
     }
-
-    /**
-     * Returns a string with the javascript to embed
-     *
-     * @return String
-     */
-    public function embedjs()
-    {
-        return '<script data-isso="//' . $this->config['issourl'] . '/" src="//' . $this->config['issourl'] .'/js/embed.min.js"></script>';
-    }
-
 }
