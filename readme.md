@@ -12,8 +12,8 @@ The record.tax and record.shipping are not required (but if you enabled shipping
 Notes
 -----
 
-You need an email address set in the config.yml (a merchant account id can also be used)
+* You need an email address set in the config.yml (a merchant account id can also be used)
 
-If enabling tax, your products must have a field named tax
-If enabling shipping, your products must have a field named shipping
+* If enabling tax, your products must have a field named tax
+* If enabling shipping, your products must have a field named shipping
 
