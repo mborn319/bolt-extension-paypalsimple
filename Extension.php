@@ -34,7 +34,7 @@ class Extension extends \Bolt\BaseExtension
     public function paypalButton($recordtitle, $recordprice, $recordtax=NULL, $recordshipping=NULL)
     {
     	$str = "<script async=\"async\" src=\"https://www.paypalobjects.com/js/external/paypal-button-minicart.min.js?merchant=" . $this->config['email'] . "\"";
-        $str .= "data-button=\"cart\" data-name=\"" . $recordtitle. "\" data-amount=\"" . $recordprice . "\"";
+        $str .= "data-button=\"cart\" data-name=\"" . htmlspecialchars($recordtitle) . "\" data-amount=\"" . $recordprice . "\"";
 	if($this->config['shipping'] == 'true'){
 	    $str .= "data-shipping=\"" . $recordshipping . "\"";
 	}
