@@ -45,7 +45,7 @@ class Extension extends \Bolt\BaseExtension
 	    $str .= "data-currency=\"" . $this->config['currency'] . "\"";
 	}
 	if($this->config['callback']){
-	    $str .="data-callback=\"http://bolt.gpls.nl/pages/about\"";
+	    $str .="data-callback=\"" . $this->config['callbackpage'] . "\"";
 	}
 	if($this->config['sandbox'] == 'true'){
 	    $str .="data-env=\"sandbox\"";
