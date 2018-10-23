@@ -2,28 +2,22 @@
 
 namespace Bolt\Extension\RealityGaps\PaypalSimple;
 
-use Bolt;
+use Bolt\Extension\SimpleExtension;
 
-class Extension extends \Bolt\BaseExtension
+class PaypalSimpleExtension extends SimpleExtension
 {
     /**
-     * Extensions PHP name
-     *
-     * @var string
-     */
-    const NAME = "PaypalSimple";
-
-    public function getName()
+    * Register twig functions to be used in templates.
+    *
+    * @see https://docs.bolt.cm/extensions/basics/twig#registering-twig-functions
+    *
+    * @return array
+    */
+    protected function registerTwigFunctions()
     {
-        return Extension::NAME;
-    }
-
-    public function initialize()
-    {
-        if ($this->app['config']->getWhichEnd() == 'frontend') {
-            // Add Twig functions
-            $this->addTwigFunction('paypalbutton', 'paypalButton');
-        }
+        return [
+            'paypalbutton' => 'paypalButton'
+        ];
     }
 
     /**
