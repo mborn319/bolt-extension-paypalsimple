@@ -16,7 +16,7 @@
 	],
 	"autoload" : {
 		"psr-4" : {
-			"Bolt\\Extension\\RealityGaps\\PaypalSimple\\" : "src"
+			"Bolt\\Extension\\RealityGaps\\PaypalSimple\\" : "src/"
 		}
 	},
     "extra" : {
