@@ -20,6 +20,7 @@
 		}
 	},
     "extra" : {
+		"bolt-class": "Bolt\\Extension\\RealityGaps\\PaypalSimple\\PaypalSimpleExtension",
         "branch-alias" : {
             "dev-master" : "2.*"
         }

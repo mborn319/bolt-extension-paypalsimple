@@ -4,6 +4,12 @@ namespace Bolt\Extension\RealityGaps\PaypalSimple;
 
 use Bolt\Extension\SimpleExtension;
 
+/**
+ * Menueditor extension class.
+ *
+ * @package PaypalSimple
+ * @author realitygaps <bolt@gapsinreality.com>
+ */
 class PaypalSimpleExtension extends SimpleExtension
 {
     /**
