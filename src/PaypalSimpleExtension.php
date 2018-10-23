@@ -1,6 +1,6 @@
 <?php
 
-namespace Bolt\Extension\Bolt\PaypalSimple;
+namespace Bolt\Extension\RealityGaps\PaypalSimple;
 
 use Bolt;
 

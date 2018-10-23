@@ -15,14 +15,8 @@
 		}
 	],
 	"autoload" : {
-		"files" : [
-			"init.php"
-		],
 		"psr-4" : {
-			"Bolt\\Extension\\Bolt\\PaypalSimple\\" : [
-				"",
-				"src/"
-			]
+			"Bolt\\Extension\\RealityGaps\\PaypalSimple\\" : "src"
 		}
 	},
     "extra" : {
